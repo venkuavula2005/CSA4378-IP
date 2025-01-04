@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>position fixed</title>
+        <style>
+            body{
+                font-family: medium;
+                margin:0;
+                padding:0;
+                line-height: 1.6;
+            }
+            header{
+                position: fixed;
+                top:0;
+                left:0;
+                background-color: aliceblue;
+                padding:4px;
+            }
+            main{
+                margin-top: 60px;
+                padding: 20px;
+            }
+            footer{
+                position:fixed;
+                bottom:0;
+                left:0;
+                width:100%;
+                background-color: blue;
+                color:white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>fixed header</h1>
+        </header>
+        <main>
+            <h2>welcome to my webpage</h2>
+            <p>this webpage demonstrate the use of the <code>position:fixed</code>property</p>
+        </main>
+        <footer>
+            <p>fixed footer always here!</p>
+        </footer>
+    </body>
+</html>
