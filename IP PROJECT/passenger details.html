@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Passenger Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            background-image: url("bus.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        form {
+            margin: auto;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 8px;
+        }
+        label, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Passenger Details</h1>
+    <form action="payment.html" onsubmit="return validatePassengerDetails()">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <button type="submit">Next</button>
+    </form>
+    <form method="post" action="seat selection.html">
+        <button type="submit">back to seat selection</button>
+    </form>
+
+    <script>
+        function validatePassengerDetails() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            if (name === "" || email === "" || phone === "") {
+                alert("All fields are required.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

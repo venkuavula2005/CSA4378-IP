@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Buses - Bus Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Make My Ride</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="search_buses.html">Search Buses</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-form-container">
+            <h2>Find Buses</h2>
+            <form action="booking.html" method="post" onsubmit="return validateSearchForm()">
+                <input type="text" name="from-location" placeholder="From (City)" required>
+                <input type="text" name="to-location" placeholder="To (City)" required>
+                <input type="date" name="travel-date" required>
+                <select name="bus-type" required>
+                    <option value="">Select Bus Type</option>
+                    <option value="luxury">Luxury</option>
+                    <option value="semi-luxury">Semi-Luxury</option>
+                    <option value="non-luxury">Non-Luxury</option>
+                </select>
+                <button type="submit">Search Buses</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Make My Ride. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function validateSearchForm() {
+            const fromLocation = document.querySelector('input[name="from-location"]').value.trim();
+            const toLocation = document.querySelector('input[name="to-location"]').value.trim();
+            const travelDate = document.querySelector('input[name="travel-date"]').value.trim();
+
+            if (!fromLocation || !toLocation || !travelDate) {
+                alert("Please fill in all fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
