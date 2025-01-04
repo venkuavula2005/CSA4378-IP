@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>grid area</title>
+        <style>
+            body{
+                font-family:medium;
+                
+                display: flex;
+                justify-content:center;
+                height:100vh;
+                margin:0;
+            }
+            grid container{
+                display: grid;
+                background-color: green;
+                grid-template-columns: 20px auto auto;
+                grid-template-rows: 20px auto;
+                gap:5px;
+                width:300px;
+                height:200px;
+            }
+            .item a{
+                background-color:palevioletred;
+                color:white;
+                text-align: center;
+                grid-column: 1\2;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="grid container">
+        <div class="item a">a</div>
+        <div class="item b">b</div>
+        <div class="item c">c</div>
+       </div> 
+    </body>
+</html>
