@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>laptop</title>
+        <style>
+            body{
+                font-family: medium;
+                margin:0;
+                padding:20px;
+                background-color:aqua;
+                border-radius: 8px;
+                text-align:center;
+            }
+            h2{
+                text-align: center;
+                color:#333;
+            }
+            input[type="checkbox"], input[type="text"], input[type="password"]{
+                
+                border-radius: 5px;
+            }
+            .container{
+                background-color: antiquewhite;
+                width:500px;
+                height:300px;
+                align-items: center;
+                text-align: center;
+                border-radius: 10px;
+                border-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>laptop specification</h2>
+            <form method="post">
+                <label>name</label>
+                <input type="text" name="name"><br>
+                <br>
+                <label>password</label>
+                <input type="password" name="password"><br>
+                <br>
+                <label>os specification:</label>
+                <div class="checkbox">
+                    <input type="checkbox" name="mac" value="mac" value="on">mac<br>
+                    <input type="checkbox" name="windows" value="windows" value="on">windows<br>
+                    <input type="checkbox" name="ubuntu" value="ubuntu">ubuntu<br>
+                    <label>brand specification:</label><br>
+                    <input type="radio" name="hp">hp
+                    <input type="radio" name="lenova">lenova
+                    <input type="radio" name="dell">dell
+                    <input type="radio" name="apple">apple
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
