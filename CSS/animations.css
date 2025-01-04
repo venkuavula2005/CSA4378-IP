@@ -1,0 +1,37 @@
+.parent{
+    margin-top:80px;
+    border:3px solid rgb(0,0,0);
+    width:30vw;
+    height:40vh;
+    color:aliceblue;
+    background-color:brown;
+    text-align:center;
+    position:relative;
+    margin:50px;
+    animation-duration:3s;
+}
+.class1{
+    margin:0px;
+    padding:20px;
+    background-color:rgb(165,42,163);
+}
+.class2{
+    margin-top:20px;
+    height:80px;
+    width:200px;
+    padding:6px;
+    background-color:blueviolet;
+}
+@keyframes venku{
+    from{
+        background-color:blue;
+        left:0px;
+        top:0px;
+    }
+    to{
+        left:100px;
+        top:0px;
+        background-color:aqua;
+
+    }
+}

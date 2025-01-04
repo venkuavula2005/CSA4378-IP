@@ -1,0 +1,23 @@
+body{
+margin-top:300px;
+margin-left:300px;
+background-color:black;
+}
+button{
+	height:80px;
+	width:150px;
+	font-size:30px;
+	font-weight:bold;
+	font-family:monospace;
+	color:orange;
+	border:5px solid blue;
+	border-radius:360px;
+	background-color:black;
+	cursor:pointer;
+	transition:5s;
+}
+button:hover{
+	boxshadow:0px 5px 50px blue;
+	0px 5px 50px blue;
+	text-shadow:0 0 5px blue;
+}

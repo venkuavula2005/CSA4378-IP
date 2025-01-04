@@ -1,0 +1,54 @@
+.parent{
+    color:rgb(232,239,245);
+    margin-left:10px;
+    text-align:center;
+    padding-top:30px;
+
+}
+.class1{
+    height:100px;
+    width:100px;
+    background:linear-gradient(
+        to left,
+        #fd04fd 20%,
+        red 20%,
+        red 40%,
+        green 40%,
+        green 60%,
+        yellow 60%,
+        yellow 80%,
+        blue 80%
+        
+    )
+}
+.class2{
+    height:100px;
+    width:100px;
+    margin-top:30px;
+    background:radial-gradient(
+        #fd04fd 20%,
+        red 20%,
+        red 40%,
+        green 40%,
+        green 60%,
+        yellow 60%,
+        yellow 80%,
+        blue 80%
+    );
+
+}
+.class3{
+    height:100px;
+    width:100px;
+    margin-top:30px;
+    background:conic-gradient(
+        #fd04fd 20%,
+        red 20%,
+        red 40%,
+        green 40%,
+        green 60%,
+        yellow 60%,
+        yellow 80%,
+        blue 80%
+    );
+}
