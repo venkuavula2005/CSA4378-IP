@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Payment Form</title>
+  <style>
+    body {
+      
+      margin: 100px;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .payment-methods {
+      margin: 15px 0;
+    }
+
+    .payment-methods label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    
+
+    .form-section {
+      display: none;
+      margin: 15px 0;
+    }
+
+    .form-section.active {
+      display: block;
+    }
+
+    .form-section input, .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Choose Payment Method</h2>
+
+    <form id="payment-form">
+      
+        <label>Select a Payment Method:</label>
+    </br>
+            <input type="radio" name="payment" value="credit-card" onchange="showSection(this)">
+            Credit Card
+            <input type="radio" name="payment" value="paypal" onchange="showSection(this)">
+            PayPal
+            <input type="radio" name="payment" value="bitcoin" onchange="showSection(this)">
+            Bitcoin
+        
+
+      <!-- Credit Card Section -->
+      <div id="credit-card-section" class="form-section">
+        <label>Credit Card Number:</label>
+        <input type="text" placeholder="Card Number" required>
+        
+        <label>Expiration Date:</label>
+        <input type="text" placeholder="MM/YY" required>
+        
+        <label>CVV:</label>
+        <input type="text" placeholder="CVV" required>
+      </div>
+
+      <!-- PayPal Section -->
+      <div id="paypal-section" class="form-section">
+        <label>PayPal Email Address:</label>
+        <input type="email" placeholder="Email Address" required>
+      </div>
+
+      <!-- Bitcoin Section -->
+      <div id="bitcoin-section" class="form-section">
+        <label>Bitcoin Address:</label>
+        <textarea placeholder="Bitcoin Address" rows="3" required></textarea>
+      </div>
+
+      <button type="submit">Submit Payment</button>
+    </form>
+  </div>
+
+  <script>
+    function showSection(element) {
+      // Hide all sections
+      document.querySelectorAll('.form-section').forEach(section => {
+        section.classList.remove('active');
+      });
+
+      // Show the selected section based on the payment method
+      if (element.value === 'credit-card') {
+        document.getElementById('credit-card-section').classList.add('active');
+      } else if (element.value === 'paypal') {
+        document.getElementById('paypal-section').classList.add('active');
+      } else if (element.value === 'bitcoin') {
+        document.getElementById('bitcoin-section').classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
