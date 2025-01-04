@@ -1,0 +1,13 @@
+let a=2;
+let b=String(a);
+let c=Boolean(a);
+let d="abc";
+let e="123";
+let f=Number(d);
+let g=Number(e);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+console.log(f);
+console.log(g);
